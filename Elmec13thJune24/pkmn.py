@@ -8,7 +8,7 @@ df = pd.read_csv('data/Pokemon.csv').rename(columns={'#': 'Number', 'Sp. Atk': '
                                                     'Sp. Def': 'Spdef', 'Type 1': 'Type1',
                                                     'Type 2': 'Type2'})
 
-simple_imputer = SimpleImputer(missing_values='nan', strategy='constant', fill_value='Pure')
+simple_imputer = SimpleImputer(strategy='constant', fill_value='Pure')
 onehot_type1 = OneHotEncoder(sparse_output=False)
 onehot_type2 = OneHotEncoder(sparse_output=False)
 sc = StandardScaler()
@@ -27,7 +27,7 @@ df_enc = pd.concat([df_encoded_type1, df_encoded_type2], axis=1)
 
 to_std_features = ['Total', 'HP', 'Attack', 'Defense', 'Spatk', 'Spdef', 'Speed']
 num_features = ['Total', 'HP', 'Attack', 'Defense', 'Spatk', 'Spdef', 'Speed']
-features = num_features + ['Type1', 'Type2']
+features = num_features
 columns_encoded = list(df_enc.columns)
 
 df = pd.concat([df, df_enc], axis=1)
