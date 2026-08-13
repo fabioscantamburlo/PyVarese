@@ -1125,6 +1125,7 @@ dependencies = [
     { name = "ipykernel" },
     { name = "numpy" },
     { name = "pandas" },
+    { name = "pygments" },
     { name = "scikit-learn" },
     { name = "skrub" },
 ]
@@ -1134,6 +1135,7 @@ requires-dist = [
     { name = "ipykernel", specifier = ">=7.3.0" },
     { name = "numpy", specifier = ">=2.5.2" },
     { name = "pandas", specifier = ">=3.0.5" },
+    { name = "pygments", specifier = ">=2.20.0" },
     { name = "scikit-learn", specifier = ">=1.9.0" },
     { name = "skrub", specifier = ">=0.10.0" },
 ]
